@@ -1,4 +1,15 @@
 # .config-nvim
+> 本项目不同于[vim](https://github.com/clh021/vim),本项目只考虑nvim,尽可能使用lua搭建
+
+[Fork Proj](https://github.com/brainfucksec/neovim-lua#installation)
+
+## start.portable.sh
+随处可用的运行模式，不影响宿主机的环境。适合公共电脑。
+本地建立软链接，设置 HOME 后运行
+
+## init.host.sh
+初始化到宿主机的运行模式，快速设置宿主机的环境。适合独立使用电脑。
+初始化仓库到 ~/.config/nvim 目录中，可继续版本控制。
 
 - [learn-neovim-lua](https://github.com/nshen/learn-neovim-lua/blob/bak/docs/basic-config.md)
 - [kiss-neovim-lua](https://github.com/brainfucksec/neovim-lua)
