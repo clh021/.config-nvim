@@ -11,7 +11,8 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Change leader to a comma
-vim.g.mapleader = ','
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -----------------------------------------------------------
 -- Neovim shortcuts
@@ -24,7 +25,9 @@ map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
 -- Map Esc to kk
-map('i', 'kk', '<Esc>')
+map('i', 'jk', '<Esc>')
+map('v', ';', ':')
+map('n', ';', ':')
 
 -- Clear search highlighting with <leader> and c
 map('n', '<leader>c', ':nohl<CR>')
@@ -33,7 +36,7 @@ map('n', '<leader>c', ':nohl<CR>')
 map('n', '<F2>', ':set invpaste paste?<CR>')
 vim.opt.pastetoggle = '<F2>'
 
--- Change split orientation
+-- Change split orientation 改变分割方向
 map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
 map('n', '<leader>th', '<C-w>t<C-w>H') -- change horizontal to vertical
 
@@ -47,14 +50,41 @@ map('n', '<C-l>', '<C-w>l')
 map('n', '<leader>r', ':so %<CR>')
 
 -- Fast saving with <leader> and s
-map('n', '<leader>s', ':w<CR>')
-map('i', '<leader>s', '<C-c>:w<CR>')
+map('n', '<leader>fs', ':w<CR>')
 
 -- Close all windows and exit from Neovim with <leader> and q
 map('n', '<leader>q', ':qa!<CR>')
 
+-- visual  连续缩进代码
+map('v', '<', '<gv')
+map('v', '>', '>gv')
+
+
+------------------------------------------------------------------
+-- windows 分屏快捷键
+map("n", "sv", ":vsp<CR>")
+map("n", "sh", ":sp<CR>")
+
+-- 关闭当前
+map("n", "sc", "<C-w>c")
+-- 关闭其他
+map("n", "so", "<C-w>o") -- close others
+
+-- 比例控制
+map("n", "s.", ":vertical resize +20<CR>")
+map("n", "s,", ":vertical resize -20<CR>")
+map("n", "s=", "<C-w>=")
+map("n", "sj", ":resize +10<CR>")
+map("n", "sk", ":resize -10<CR>")
+
+-- alt + hjkl  窗口之间跳转
+map("n", "<A-h>", "<C-w>h")
+map("n", "<A-j>", "<C-w>j")
+map("n", "<A-k>", "<C-w>k")
+map("n", "<A-l>", "<C-w>l")
+
 -----------------------------------------------------------
--- Applications and Plugins shortcuts
+-- Applcations and Plugins shortcuts
 -----------------------------------------------------------
 
 -- Terminal mappings
@@ -68,3 +98,13 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
 
 -- Tagbar
 map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
+--------------------------------------------------------------------
+-- 插件快捷键
+
+-- bufferline 左右Tab切换
+map("n", "<C-h>", ":BufferLineCyclePrev<CR>")
+map("n", "<C-l>", ":BufferLineCycleNext<CR>")
+map("n", "<C-w>", ":bd<CR>")
+
+-- nvim-treesitter 代码格式化
+map("n", "<leader>i", "gg=G")
