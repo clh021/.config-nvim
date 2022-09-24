@@ -3,6 +3,12 @@
 
 [Fork Proj](https://github.com/brainfucksec/neovim-lua#installation)
 
+## 思考
+> 应该将自己的常用快捷键想法和习惯独立出来
+> 比如编辑模式下的鼠标移动等
+> 这并非随时准备替换不同的配置基础
+> 而是独立出来后可以专门管理，即使是在其它机器上
+
 ## start.portable.sh
 随处可用的运行模式，不影响宿主机的环境。适合公共电脑。
 本地建立软链接，设置 HOME 后运行
