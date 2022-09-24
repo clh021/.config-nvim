@@ -22,4 +22,5 @@
 - [kiss-neovim-lua](https://github.com/brainfucksec/neovim-lua)
 - [neovim-config](https://blog.smslit.cn/2022/05/02/neovim-config/)
 - [avimitin](https://github.com/Avimitin/nvim)
+- [portable nvim](https://github.com/HUAHUAI23/nvim64)
 > 配置的快捷键尽量与 doom-emacs 一致,方便以后可能的迁移
