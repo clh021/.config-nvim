@@ -17,8 +17,9 @@
 初始化到宿主机的运行模式，快速设置宿主机的环境。适合独立使用电脑。
 初始化仓库到 ~/.config/nvim 目录中，可继续版本控制。
 
+## 参考
 - [learn-neovim-lua](https://github.com/nshen/learn-neovim-lua/blob/bak/docs/basic-config.md)
 - [kiss-neovim-lua](https://github.com/brainfucksec/neovim-lua)
 - [neovim-config](https://blog.smslit.cn/2022/05/02/neovim-config/)
-
+- [avimitin](https://github.com/Avimitin/nvim)
 > 配置的快捷键尽量与 doom-emacs 一致,方便以后可能的迁移
