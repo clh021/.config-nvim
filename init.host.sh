@@ -24,3 +24,4 @@ cd ~/.config/nvim
 git checkout .
 
 echo "宿主机初始化配置完成!"
+nvim +PackerSync
